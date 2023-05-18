@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class EnemyCounter : MonoBehaviour
 {
     GameObject[] enemies;
     public Text enemyCounterText;
+    public UnityEvent OnAllEnemiesDestroyed;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,8 @@ public class EnemyCounter : MonoBehaviour
         }
         else
         {
-            enemyCounterText.text = "Well Done! Proceed to the next zone!";
+            OnAllEnemiesDestroyed.Invoke();
         }
+
     }
 }

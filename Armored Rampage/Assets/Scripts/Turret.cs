@@ -72,7 +72,7 @@ public class Turret : MonoBehaviour
                     Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), collider);
                 }
             }
-
+            ScreenShake.Instance.ShakeCamera(4f,.1f);
             OnShoot?.Invoke();
             OnRealoading?.Invoke(currentDelay);
         }
