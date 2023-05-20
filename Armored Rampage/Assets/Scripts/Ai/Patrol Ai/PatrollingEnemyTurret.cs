@@ -8,11 +8,16 @@ public class PatrollingEnemyTurret : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Transform turretRotationPoint;
-    [SerializeField] private LayerMask enemyMask;
 
     [Header("Attribute")]
     [SerializeField] private float targetrange = 5f;
 
+    public GameObject Bullet;
+
+    public float fireRate;
+    public float nextTimeToShoot = 0;
+    public Transform ShootPoint;
+    public float force;
     private void OnDrawGizmosSelected()
     {
         Handles.color = Color.cyan;
@@ -27,14 +32,26 @@ public class PatrollingEnemyTurret : MonoBehaviour
             FindTarget();
             return;
         }
-        RotateTowardsTarget();
+        else
+        {
+            RotateTowardsTarget();
+            if (Time.time % fireRate < 0.001)
+            {
+                Shoot();                
+            }
+        }
 
         if (!CheckTargetIsInRange())
         {
             target = null;
         }
 
+        
+
+        
+
     }
+
 
     private bool CheckTargetIsInRange()
     {
@@ -57,13 +74,10 @@ public class PatrollingEnemyTurret : MonoBehaviour
 
         if (hit.Length > 0)
         {
-            Debug.Log(hit.Length);
             foreach (var item in hit)
             {
-                Debug.Log(item.collider.tag);
                 if (item.collider.gameObject.tag == "Player")
                 {
-                    Debug.Log("Found the player");
                     target = item.transform;
                 }
             }
@@ -71,13 +85,10 @@ public class PatrollingEnemyTurret : MonoBehaviour
         }
         if (hit2.Length > 0)
         {
-            Debug.Log(hit.Length);
             foreach (var item in hit2)
             {
-                Debug.Log(item.collider.tag);
                 if (item.collider.gameObject.tag == "Player")
                 {
-                    Debug.Log("Found the player");
                     target = item.transform;
                 }
             }
@@ -85,13 +96,10 @@ public class PatrollingEnemyTurret : MonoBehaviour
         }
         if (hit3.Length > 0)
         {
-            Debug.Log(hit.Length);
             foreach (var item in hit3)
             {
-                Debug.Log(item.collider.tag);
                 if (item.collider.gameObject.tag == "Player")
                 {
-                    Debug.Log("Found the player");
                     target = item.transform;
                 }
             }
@@ -99,13 +107,10 @@ public class PatrollingEnemyTurret : MonoBehaviour
         }
         if (hit4.Length > 0)
         {
-            Debug.Log(hit.Length);
             foreach (var item in hit4)
             {
-                Debug.Log(item.collider.tag);
                 if (item.collider.gameObject.tag == "Player")
                 {
-                    Debug.Log("Found the player");
                     target = item.transform;
                 }
             }
@@ -114,5 +119,16 @@ public class PatrollingEnemyTurret : MonoBehaviour
 
 
 
+
+
+    } // :) Dont open pls, like ever :) :) Nem tudom pontosan miért mûködik így de megy szóval gg
+
+    void Shoot()
+    {
+        float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg - 90f;
+        Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+
+        GameObject bulletIns = Instantiate(Bullet, ShootPoint.position, targetRotation);
+        bulletIns.GetComponent<Rigidbody2D>().AddForce(new Vector2(target.position.x - transform.position.x,target.position.y - transform.position.y) * force);
     }
 }

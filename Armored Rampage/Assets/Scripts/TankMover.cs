@@ -36,6 +36,8 @@ public class TankMover : MonoBehaviour
 
         rb2d.velocity = direction * maxSpeed * Time.deltaTime;
 
+      
+
         HandleSpriteFlip();
 
         List<Sprite> directionSprites = GetSpriteDirection();
