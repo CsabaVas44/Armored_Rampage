@@ -28,6 +28,10 @@ public class NextLevel : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+    public void SelectorButton()
+    {
+        SceneManager.LoadScene(1);
+    }
 
 
 }
