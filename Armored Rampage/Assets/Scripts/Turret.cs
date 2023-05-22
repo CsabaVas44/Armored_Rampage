@@ -45,6 +45,7 @@ public class Turret : MonoBehaviour
 
     public void Shoot()
     {
+        Debug.Log("shoot");
        if (canShoot)
        {
             canShoot = false;
@@ -72,8 +73,8 @@ public class Turret : MonoBehaviour
                     Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), collider);
                 }
             }
-            ScreenShake.Instance.ShakeCamera(4f,.1f);
             OnShoot?.Invoke();
+            ScreenShake.Instance.ShakeCamera(4f, .1f);
             OnRealoading?.Invoke(currentDelay);
         }
         OnCantShoot?.Invoke();

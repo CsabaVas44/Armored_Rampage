@@ -21,7 +21,7 @@ public class ScreenShake : MonoBehaviour
     {
         CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin = 
             cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-
+        Debug.Log(intesity);
         cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = intesity;
         shakeTimerTotal = duration;
         startingIntensity = intesity;
