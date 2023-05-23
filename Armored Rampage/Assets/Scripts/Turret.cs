@@ -75,7 +75,7 @@ public class Turret : MonoBehaviour
                     }
                 }
                 OnShoot?.Invoke();
-                ScreenShake.Instance.ShakeCamera(4f, .1f);
+                ScreenShake.Instance.ShakeCamera(3f, .1f,2f);
                 OnRealoading?.Invoke(currentDelay);
             }
             OnCantShoot?.Invoke();

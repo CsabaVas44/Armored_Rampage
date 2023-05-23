@@ -10,6 +10,7 @@ public class ScreenShake : MonoBehaviour
     private float shakeTimer;
     private float shakeTimerTotal;
     private float startingIntensity;
+    public float startingFrequency;
 
     public void Awake()
     {
@@ -17,7 +18,7 @@ public class ScreenShake : MonoBehaviour
         cinemachineVirtualCamera = GetComponent<CinemachineVirtualCamera>();
     }
 
-    public void ShakeCamera(float intesity, float duration)
+    public void ShakeCamera(float intesity, float duration, float frequency)
     {
         CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin = 
             cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
@@ -26,6 +27,7 @@ public class ScreenShake : MonoBehaviour
         shakeTimerTotal = duration;
         startingIntensity = intesity;
         shakeTimer = duration;
+        startingFrequency = frequency;
     }
 
     private void Update()
@@ -38,6 +40,8 @@ public class ScreenShake : MonoBehaviour
 
                 cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 
                 Mathf.Lerp(startingIntensity, 0f, (1-(shakeTimer / shakeTimerTotal)));
+                cinemachineBasicMultiChannelPerlin.m_FrequencyGain =
+                Mathf.Lerp(startingFrequency, 0f, (1 - (shakeTimer / shakeTimerTotal)));
         }
     }
 
