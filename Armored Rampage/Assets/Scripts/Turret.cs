@@ -45,39 +45,41 @@ public class Turret : MonoBehaviour
 
     public void Shoot()
     {
-        Debug.Log("shoot");
-       if (canShoot)
-       {
-            canShoot = false;
-            currentDelay = reloadDelay;
-
-            foreach (var barrel in turretBarels)
+        if (!PauseMenu.isPaused)
+        {
+            if (canShoot)
             {
+                canShoot = false;
+                currentDelay = reloadDelay;
 
-
-                var hit = Physics2D.Raycast(barrel.position, barrel.up);
-                if(hit.collider != null)
+                foreach (var barrel in turretBarels)
                 {
-                    Debug.Log(hit.collider.name);
+
+
+                    var hit = Physics2D.Raycast(barrel.position, barrel.up);
+                    if (hit.collider != null)
+                    {
+                        Debug.Log(hit.collider.name);
+                    }
+
+
+                    GameObject bullet = Instantiate(bulletPrefab);
+
+                    bullet.transform.position = barrel.position;
+                    bullet.transform.localRotation = barrel.rotation;
+                    bullet.GetComponent<Bullet>().Initialize();
+
+                    foreach (var collider in tankcolliders)
+                    {
+                        Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), collider);
+                    }
                 }
-
-
-                GameObject bullet = Instantiate(bulletPrefab);
-
-                bullet.transform.position = barrel.position;
-                bullet.transform.localRotation = barrel.rotation;
-                bullet.GetComponent<Bullet>().Initialize();
-
-                foreach (var collider in tankcolliders)
-                {
-                    Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), collider);
-                }
+                OnShoot?.Invoke();
+                ScreenShake.Instance.ShakeCamera(4f, .1f);
+                OnRealoading?.Invoke(currentDelay);
             }
-            OnShoot?.Invoke();
-            ScreenShake.Instance.ShakeCamera(4f, .1f);
-            OnRealoading?.Invoke(currentDelay);
+            OnCantShoot?.Invoke();
         }
-        OnCantShoot?.Invoke();
     }
    
 }

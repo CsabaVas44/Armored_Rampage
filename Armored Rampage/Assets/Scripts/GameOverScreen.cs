@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class GameOverScreen : MonoBehaviour
 {
-    [SerializeField]
-    public int thisLevelIndex;
+ 
 
     public void Setup()
     {
@@ -16,7 +15,7 @@ public class GameOverScreen : MonoBehaviour
 
     public void RestartButton()
     {
-        SceneManager.LoadScene(thisLevelIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void ExitButton()
