@@ -32,7 +32,7 @@ public class RandomMovement : MonoBehaviour
     IEnumerator WaitCoroutine()
     {
         transformDir = transform.position;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         direction = transform.position;
     }
     void Update()
@@ -72,23 +72,23 @@ public class RandomMovement : MonoBehaviour
     {
         List<Sprite> selectedSprites = null;
 
-
+        Debug.Log(transformDir.y + "Transform");
 
         if (direction.x < transform.position.x)
         {
             spriteRenderer.flipX = false;
-            if (transformDir.y > direction.y)
-            {
-                selectedSprites = neSprites;
-            }
-            else if (transformDir.y < direction.y)
-            {
-                selectedSprites = seSprites;
-            }
-            else
-            {
+            //if (transformDir.y > direction.y)
+            //{
+            //    selectedSprites = neSprites;
+            //}
+            //else if (transformDir.y < direction.y)
+            //{
+            //    selectedSprites = seSprites;
+            //}
+            //else
+            //{
                 selectedSprites = eSprites;
-            }
+            //}
 
             if (transformDir.x == direction.x)
             {
@@ -100,18 +100,18 @@ public class RandomMovement : MonoBehaviour
         else
         {
             spriteRenderer.flipX = true;
-            if (transformDir.y > direction.y)
-            {
-                selectedSprites = neSprites;
-            }
-            else if (transformDir.y < direction.y)
-            {
-                selectedSprites = seSprites;
-            }
-            else
-            {
+            //if (transformDir.y > direction.y)
+            //{
+            //    selectedSprites = neSprites;
+            //}
+            //else if (transformDir.y < direction.y)
+            //{
+            //    selectedSprites = seSprites;
+            //}
+            //else
+            //{
                 selectedSprites = eSprites;
-            }
+            //}
 
             if (transformDir.x == direction.x)
             {
