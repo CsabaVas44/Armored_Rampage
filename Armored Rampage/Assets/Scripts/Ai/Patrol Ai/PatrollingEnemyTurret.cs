@@ -33,7 +33,7 @@ public class PatrollingEnemyTurret : MonoBehaviour
             RotateTowardsTarget();
             if (Time.time % fireRate < 0.001)
             {
-                Shoot();                
+                Shoot();
             }
         }
 
@@ -42,9 +42,9 @@ public class PatrollingEnemyTurret : MonoBehaviour
             target = null;
         }
 
-        
 
-        
+
+
 
     }
 
@@ -137,6 +137,6 @@ public class PatrollingEnemyTurret : MonoBehaviour
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
 
         GameObject bulletIns = Instantiate(Bullet, ShootPoint.position, targetRotation);
-        bulletIns.GetComponent<Rigidbody2D>().AddForce(new Vector2(target.position.x - transform.position.x,target.position.y - transform.position.y) * force);
+        bulletIns.GetComponent<Rigidbody2D>().AddForce(new Vector2(target.position.x - transform.position.x, target.position.y - transform.position.y) * force);
     }
 }

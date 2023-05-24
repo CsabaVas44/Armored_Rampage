@@ -59,69 +59,87 @@ public class MultipleShots : MonoBehaviour
     private void FindTarget()
     {
 
-        //RaycastHit2D[] hit2 = Physics2D.RaycastAll(this.transform.position, Vector2.right, targetrange * 2f);
-        //RaycastHit2D[] hit3 = Physics2D.RaycastAll(this.transform.position, Vector2.up, targetrange * 2f);
-        //RaycastHit2D[] hit4 = Physics2D.RaycastAll(this.transform.position, Vector2.left, targetrange * 2f);
-
-        RaycastHit2D[] hit = Physics2D.CircleCastAll(ShootPoint.position, targetrange, Player.GetComponent<Rigidbody2D>().position);
-        Debug.Log(Player.GetComponent<Rigidbody2D>().position);
+        RaycastHit2D[] hit = Physics2D.RaycastAll(this.transform.position, Vector2.down, targetrange * 2f);
+        RaycastHit2D[] hit2 = Physics2D.RaycastAll(this.transform.position, Vector2.right, targetrange * 2f);
+        RaycastHit2D[] hit3 = Physics2D.RaycastAll(this.transform.position, Vector2.up, targetrange * 2f);
+        RaycastHit2D[] hit4 = Physics2D.RaycastAll(this.transform.position, Vector2.left, targetrange * 2f);
+        RaycastHit2D[] hit5 = Physics2D.RaycastAll(this.transform.position, Vector2.left - Vector2.down, targetrange * 2f);
 
         if (hit.Length > 0)
         {
-            Debug.Log("HitLength" + hit.Length);
-            
             foreach (var item in hit)
             {
-                Debug.Log(item.collider.tag);
                 if (item.collider.gameObject.tag == "Player")
                 {
                     target = item.transform;
                 }
             }
 
-            //}
-            //if (hit3.Length > 0)
-            //{
-            //    foreach (var item in hit3)
-            //    {
-            //        if (item.collider.gameObject.tag == "Player")
-            //        {
-            //            target = item.transform;
-            //        }
-            //    }
+        }
+        if (hit2.Length > 0)
+        {
+            foreach (var item in hit2)
+            {
+                if (item.collider.gameObject.tag == "Player")
+                {
+                    target = item.transform;
+                }
+            }
 
-            //}
-            //if (hit4.Length > 0)
-            //{
-            //    foreach (var item in hit4)
-            //    {
-            //        if (item.collider.gameObject.tag == "Player")
-            //        {
-            //            target = item.transform;
-            //        }
-            //    }
+        }
+        if (hit3.Length > 0)
+        {
+            foreach (var item in hit3)
+            {
+                if (item.collider.gameObject.tag == "Player")
+                {
+                    target = item.transform;
+                }
+            }
 
-            //}
+        }
+        if (hit4.Length > 0)
+        {
+            foreach (var item in hit4)
+            {
+                if (item.collider.gameObject.tag == "Player")
+                {
+                    target = item.transform;
+                }
+            }
 
+        }
+        if (hit5.Length > 0)
+        {
+            foreach (var item in hit5)
+            {
+                if (item.collider.gameObject.tag == "Player")
+                {
+                    target = item.transform;
+                }
+            }
 
         }
 
 
-        // :) Dont open pls, like ever :) :) Nem tudom pontosan miért mûködik így de megy szóval gg
-    }
+    
 
-    void Shoot()
-    {
-        float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg - 90f;
-        Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
 
-        GameObject bulletIns = Instantiate(Bullet, ShootPoint.position, targetRotation);
-        GameObject bulletIns2 = Instantiate(Bullet, ShootPoint.position, targetRotation);
-        GameObject bulletIns3 = Instantiate(Bullet, ShootPoint.position, targetRotation);
-        bulletIns.GetComponent<Rigidbody2D>().AddForce(new Vector2(target.position.x - 1 - transform.position.x, target.position.y - 1 - transform.position.y) * force);
-        bulletIns2.GetComponent<Rigidbody2D>().AddForce(new Vector2(target.position.x + 1 - transform.position.x, target.position.y + 1 - transform.position.y) * force);
-        bulletIns3.GetComponent<Rigidbody2D>().AddForce(new Vector2(target.position.x - transform.position.x, target.position.y - transform.position.y) * force);
-    }
+    // :) Dont open pls, like ever :) :) Nem tudom pontosan miért mûködik így de megy szóval gg
+}
+
+void Shoot()
+{
+    float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg - 90f;
+    Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+
+    GameObject bulletIns = Instantiate(Bullet, ShootPoint.position, targetRotation);
+    GameObject bulletIns2 = Instantiate(Bullet, ShootPoint.position, targetRotation);
+    GameObject bulletIns3 = Instantiate(Bullet, ShootPoint.position, targetRotation);
+    bulletIns.GetComponent<Rigidbody2D>().AddForce(new Vector2(target.position.x - 1 - transform.position.x, target.position.y - 1 - transform.position.y) * force);
+    bulletIns2.GetComponent<Rigidbody2D>().AddForce(new Vector2(target.position.x + 1 - transform.position.x, target.position.y + 1 - transform.position.y) * force);
+    bulletIns3.GetComponent<Rigidbody2D>().AddForce(new Vector2(target.position.x - transform.position.x, target.position.y - transform.position.y) * force);
+}
 
 }
 

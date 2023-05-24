@@ -14,10 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelMenu/LevelSelection.unity
     guid: 2f4feae0eabbfd4428ca3b7b90b65b1a
-  - enabled: 1
+  - enabled: 0
     path: Assets/ArmoredRampage.unity
     guid: 0753c0ab6c37d4345b00923eecc43990
   - enabled: 1
     path: Assets/Scenes/Levels/Level01.unity
+    guid: 12df42bffd0eabb41a169319dd58b544
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level02.unity
     guid: 6ad855aab680bb44bb7d257b5a0f53e0
   m_configObjects: {}
