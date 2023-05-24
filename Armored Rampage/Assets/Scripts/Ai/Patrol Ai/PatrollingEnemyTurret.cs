@@ -63,12 +63,11 @@ public class PatrollingEnemyTurret : MonoBehaviour
 
     private void FindTarget()
     {
-        RaycastHit2D[] hit = Physics2D.RaycastAll(this.transform.position, Player.GetComponent<Rigidbody2D>().position, targetrange * 2f);
-        Debug.Log(Player.GetComponent<Rigidbody2D>().position);
-        //RaycastHit2D[] hit2 = Physics2D.RaycastAll(this.transform.position, Vector2.right, targetrange * 2f);
-        //RaycastHit2D[] hit3 = Physics2D.RaycastAll(this.transform.position, Vector2.up, targetrange * 2f);
-        //RaycastHit2D[] hit4 = Physics2D.RaycastAll(this.transform.position, Vector2.left, targetrange * 2f);
-        //RaycastHit2D[] hit5 = Physics2D.RaycastAll(this.transform.position, Vector2.left-Vector2.down, targetrange * 2f);
+        RaycastHit2D[] hit = Physics2D.RaycastAll(this.transform.position, Vector2.down, targetrange * 2f);
+        RaycastHit2D[] hit2 = Physics2D.RaycastAll(this.transform.position, Vector2.right, targetrange * 2f);
+        RaycastHit2D[] hit3 = Physics2D.RaycastAll(this.transform.position, Vector2.up, targetrange * 2f);
+        RaycastHit2D[] hit4 = Physics2D.RaycastAll(this.transform.position, Vector2.left, targetrange * 2f);
+        RaycastHit2D[] hit5 = Physics2D.RaycastAll(this.transform.position, Vector2.left - Vector2.down, targetrange * 2f);
 
         if (hit.Length > 0)
         {
@@ -81,50 +80,50 @@ public class PatrollingEnemyTurret : MonoBehaviour
             }
 
         }
-        //if (hit2.Length > 0)
-        //{
-        //    foreach (var item in hit2)
-        //    {
-        //        if (item.collider.gameObject.tag == "Player")
-        //        {
-        //            target = item.transform;
-        //        }
-        //    }
+        if (hit2.Length > 0)
+        {
+            foreach (var item in hit2)
+            {
+                if (item.collider.gameObject.tag == "Player")
+                {
+                    target = item.transform;
+                }
+            }
 
-        //}
-        //if (hit3.Length > 0)
-        //{
-        //    foreach (var item in hit3)
-        //    {
-        //        if (item.collider.gameObject.tag == "Player")
-        //        {
-        //            target = item.transform;
-        //        }
-        //    }
+        }
+        if (hit3.Length > 0)
+        {
+            foreach (var item in hit3)
+            {
+                if (item.collider.gameObject.tag == "Player")
+                {
+                    target = item.transform;
+                }
+            }
 
-        //}
-        //if (hit4.Length > 0)
-        //{
-        //    foreach (var item in hit4)
-        //    {
-        //        if (item.collider.gameObject.tag == "Player")
-        //        {
-        //            target = item.transform;
-        //        }
-        //    }
+        }
+        if (hit4.Length > 0)
+        {
+            foreach (var item in hit4)
+            {
+                if (item.collider.gameObject.tag == "Player")
+                {
+                    target = item.transform;
+                }
+            }
 
-        //}
-        //if (hit5.Length > 0)
-        //{
-        //    foreach (var item in hit5)
-        //    {
-        //        if (item.collider.gameObject.tag == "Player")
-        //        {
-        //            target = item.transform;
-        //        }
-        //    }
+        }
+        if (hit5.Length > 0)
+        {
+            foreach (var item in hit5)
+            {
+                if (item.collider.gameObject.tag == "Player")
+                {
+                    target = item.transform;
+                }
+            }
 
-        //}
+        }
 
 
 
