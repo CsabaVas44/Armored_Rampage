@@ -22,7 +22,7 @@ public class MaxHPBuff : MonoBehaviour
 
         yield return new WaitForSeconds(duration);
 
-        collisionObj.GetComponentInChildren<TankMover>().maxSpeed -= buffValue;
+        collisionObj.GetComponentInChildren<Damagable>().MaxHealth -= buffValue;
         Destroy(this.gameObject);
 
     }
