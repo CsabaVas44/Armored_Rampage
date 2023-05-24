@@ -18,11 +18,6 @@ public class MultipleShots : MonoBehaviour
     public float nextTimeToShoot = 0;
     public Transform ShootPoint;
     public float force;
-    private void OnDrawGizmosSelected()
-    {
-        Handles.color = Color.cyan;
-        Handles.DrawWireDisc(transform.position, transform.forward, targetrange);
-    }
 
     private Transform target;
     private void Update()

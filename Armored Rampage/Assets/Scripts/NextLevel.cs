@@ -12,6 +12,7 @@ public class NextLevel : MonoBehaviour
     {
         gameObject.SetActive(true);
     }
+    
 
     public void NextLevelButton()
     {

@@ -8,6 +8,8 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenu;
     public static bool isPaused;
+    public UnityEvent PausedEvent;
+    public UnityEvent UnpausedEvent;
     
     void Start()
     {
@@ -22,10 +24,12 @@ public class PauseMenu : MonoBehaviour
             if (isPaused)
             {
                 ResumeGame();
+                UnpausedEvent.Invoke();
             }
             else
             {
                 PauseGame();
+                PausedEvent.Invoke();
             }
         }
     }
