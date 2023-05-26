@@ -9,6 +9,7 @@ TagManager:
   - Pointer
   - NextLevel
   - Bullet
+  - Barrel
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - Chest
   - UsAsEnemy
   - MakiCsabi
-  - 
+  - PowerUps
   - 
   - 
   - 

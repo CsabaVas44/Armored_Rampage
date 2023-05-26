@@ -15,11 +15,11 @@ public class Damagable : MonoBehaviour
     public UnityEvent OnHit;
     public UnityEvent OnHeal;
 
+    public Sprite DeadTank;
 
-
-    public float Health 
-    { 
-        get => health; 
+    public float Health
+    {
+        get => health;
 
         set
         {
@@ -36,7 +36,7 @@ public class Damagable : MonoBehaviour
     public void Hit(float damagePoints)
     {
         Health -= damagePoints;
-        if(Health <= 0)
+        if (Health <= 0)
         {
             OnDead?.Invoke();
             Destroy(gameObject);
@@ -52,6 +52,12 @@ public class Damagable : MonoBehaviour
         Health += healthBoost;
         Health = Mathf.Clamp(Health, 0, MaxHealth);
         OnHeal?.Invoke();
+    }
+
+    public void CastTank()
+    {
+        OnDead.Invoke();
+        GameObject.Instantiate(DeadTank);
     }
 
 
