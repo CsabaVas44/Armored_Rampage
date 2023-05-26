@@ -14,8 +14,8 @@ public class Damagable : MonoBehaviour
     public UnityEvent<float> OnHealthChange;
     public UnityEvent OnHit;
     public UnityEvent OnHeal;
-
-    public Sprite DeadTank;
+    public Transform spawnPoint;
+    public GameObject DeadTank;
 
     public float Health
     {
@@ -40,6 +40,7 @@ public class Damagable : MonoBehaviour
         {
             OnDead?.Invoke();
             Destroy(gameObject);
+            GameObject DeadTankGO = Instantiate(DeadTank, spawnPoint.position, Quaternion.identity);
         }
         else
         {

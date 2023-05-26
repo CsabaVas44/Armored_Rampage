@@ -2694,7 +2694,11 @@ PrefabInstance:
     - target: {fileID: 7189890147363965847, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
       propertyPath: DeadTank
       value: 
-      objectReference: {fileID: 21300000, guid: d137143756327394a8aa63ab20ed5cc6, type: 3}
+      objectReference: {fileID: 818954807361831999, guid: a6ecc052137345646b7b77301e4e0937, type: 3}
+    - target: {fileID: 7189890147363965847, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 2136234538}
     - target: {fileID: 7189890147363965847, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
       propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -20267,7 +20271,11 @@ PrefabInstance:
     - target: {fileID: 7189890147363965847, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
       propertyPath: DeadTank
       value: 
-      objectReference: {fileID: 21300000, guid: d137143756327394a8aa63ab20ed5cc6, type: 3}
+      objectReference: {fileID: 818954807361831999, guid: a6ecc052137345646b7b77301e4e0937, type: 3}
+    - target: {fileID: 7189890147363965847, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1650649462}
     - target: {fileID: 7189890147363965847, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
       propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -20442,6 +20450,11 @@ MonoBehaviour:
   nextTimeToShoot: 1
   ShootPoint: {fileID: 862483158}
   force: 400
+--- !u!4 &932455241 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7189890147363965840, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
+  m_PrefabInstance: {fileID: 1473307712}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &972916274
 GameObject:
   m_ObjectHideFlags: 0
@@ -20884,6 +20897,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc3cf9f5620ec494abf40a3dba53ae8e, type: 3}
+--- !u!4 &1451142076 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7189890147363965840, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
+  m_PrefabInstance: {fileID: 1569750166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1453415102 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1332859000003978253, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
@@ -20979,7 +20997,11 @@ PrefabInstance:
     - target: {fileID: 7189890147363965847, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
       propertyPath: DeadTank
       value: 
-      objectReference: {fileID: 21300000, guid: d137143756327394a8aa63ab20ed5cc6, type: 3}
+      objectReference: {fileID: 818954807361831999, guid: a6ecc052137345646b7b77301e4e0937, type: 3}
+    - target: {fileID: 7189890147363965847, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 932455241}
     - target: {fileID: 7189890147363965847, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
       propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -21060,6 +21082,11 @@ PrefabInstance:
     - {fileID: 5639162752833027142, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
     - {fileID: 5639162752833027151, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
+--- !u!4 &1484578532 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7189890147363965840, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
+  m_PrefabInstance: {fileID: 1670544161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1569750166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21210,7 +21237,11 @@ PrefabInstance:
     - target: {fileID: 7189890147363965847, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
       propertyPath: DeadTank
       value: 
-      objectReference: {fileID: 21300000, guid: d137143756327394a8aa63ab20ed5cc6, type: 3}
+      objectReference: {fileID: 818954807361831999, guid: a6ecc052137345646b7b77301e4e0937, type: 3}
+    - target: {fileID: 7189890147363965847, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1451142076}
     - target: {fileID: 7189890147363965847, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
       propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -22308,6 +22339,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1332859000003978253, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
   m_PrefabInstance: {fileID: 547766630}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1650649462 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7189890147363965840, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
+  m_PrefabInstance: {fileID: 870502830}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1670544161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22394,7 +22430,11 @@ PrefabInstance:
     - target: {fileID: 7189890147363965847, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
       propertyPath: DeadTank
       value: 
-      objectReference: {fileID: 21300000, guid: d137143756327394a8aa63ab20ed5cc6, type: 3}
+      objectReference: {fileID: 818954807361831999, guid: a6ecc052137345646b7b77301e4e0937, type: 3}
+    - target: {fileID: 7189890147363965847, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1484578532}
     - target: {fileID: 7189890147363965847, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
       propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -140608,3 +140648,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d142b2af1f2654e91192773416c0ec, type: 3}
+--- !u!4 &2136234538 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7189890147363965840, guid: bd4fec562e4167d42a13dfbc4b7d50fc, type: 3}
+  m_PrefabInstance: {fileID: 547766630}
+  m_PrefabAsset: {fileID: 0}
