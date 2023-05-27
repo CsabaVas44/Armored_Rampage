@@ -16,9 +16,8 @@ public class NextLevel : MonoBehaviour
 
     public void NextLevelButton()
     {
-        scene = SceneManager.GetActiveScene();
-        int thisLevelScene = scene.buildIndex;
-        SceneManager.LoadScene(thisLevelScene + 1);
+        //DataHolder.Money = DataHolder.Money + 1000;
+        SceneManager.LoadScene(1);
     }
     public void MainMenuButton()
     {
@@ -27,7 +26,8 @@ public class NextLevel : MonoBehaviour
 
     public void UpgradeButton()
     {
-        SceneManager.LoadScene(0);
+        //DataHolder.Money = DataHolder.Money + 1000;
+        SceneManager.LoadScene(4);
     }
     public void SelectorButton()
     {
