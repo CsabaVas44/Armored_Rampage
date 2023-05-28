@@ -25,6 +25,11 @@ public class Turret : MonoBehaviour
     private void Awake()
     {
         tankcolliders = GetComponentsInParent<Collider2D>();
+
+        if (DataHolder.TankLevel == 1)
+        {
+            reloadDelay = 0.5f;
+        }
     }
 
     private void Update()
@@ -64,10 +69,24 @@ public class Turret : MonoBehaviour
 
 
                     GameObject bullet = Instantiate(bulletPrefab);
-
                     bullet.transform.position = barrel.position;
                     bullet.transform.localRotation = barrel.rotation;
                     bullet.GetComponent<Bullet>().Initialize();
+
+                    if (DataHolder.TankLevel == 1)
+                    {
+                        GameObject bullet2 = Instantiate(bulletPrefab);
+                        GameObject bullet3 = Instantiate(bulletPrefab);
+
+                        bullet2.transform.position = barrel.position;
+                        bullet2.transform.localRotation = barrel.rotation * Quaternion.Euler(0f, 0f, 10f);
+                        bullet2.GetComponent<Bullet>().Initialize();
+
+                        bullet3.transform.position = barrel.position;
+                        bullet3.transform.localRotation = barrel.rotation * Quaternion.Euler(0f, 0f, -10f);
+                        bullet3.GetComponent<Bullet>().Initialize();
+                    }
+                           
 
                     foreach (var collider in tankcolliders)
                     {
