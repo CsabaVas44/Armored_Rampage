@@ -1972,7 +1972,7 @@ PrefabInstance:
     - target: {fileID: 4008497111665636910, guid: 299f111d710ce3148a8298f657b53913, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: a220ebf46f6d7db46a07120b366f231e, type: 3}
+      objectReference: {fileID: 8300000, guid: 8b9892e858b54334faee529bfe53735f, type: 3}
     - target: {fileID: 4008497111665636911, guid: 299f111d710ce3148a8298f657b53913, type: 3}
       propertyPath: m_Name
       value: BackgroundMusic
@@ -3618,7 +3618,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 653223233}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.9680133, y: -1.2081347, z: -12.5}
+  m_LocalPosition: {x: -6.9680915, y: -1.2084737, z: -12.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
