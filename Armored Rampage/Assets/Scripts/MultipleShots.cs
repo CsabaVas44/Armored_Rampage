@@ -18,6 +18,7 @@ public class MultipleShots : MonoBehaviour
     public float nextTimeToShoot = 0;
     public Transform ShootPoint;
     public float force;
+    private bool canShoot = false;
 
     private Transform target;
     private void Update()
@@ -30,10 +31,7 @@ public class MultipleShots : MonoBehaviour
         else
         {
             RotateTowardsTarget();
-            if (Time.time % fireRate < 0.001)
-            {
-                Shoot();
-            }
+
         }
 
         if (!CheckTargetIsInRange())
@@ -42,10 +40,21 @@ public class MultipleShots : MonoBehaviour
         }
 
     }
-
+    IEnumerator ShootCoroutine()
+    {
+        canShoot = true;
+        yield return new WaitForSeconds(1.0f / fireRate);
+        canShoot = false;
+        Shoot();
+    }
 
     private bool CheckTargetIsInRange()
     {
+        if (!canShoot)
+        {
+            StartCoroutine(ShootCoroutine());
+        }
+
         return Vector2.Distance(target.position, transform.position) <= targetrange;
     }
 

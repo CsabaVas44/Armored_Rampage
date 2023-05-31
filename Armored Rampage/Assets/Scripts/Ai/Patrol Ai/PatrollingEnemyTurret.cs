@@ -19,6 +19,7 @@ public class PatrollingEnemyTurret : MonoBehaviour
     public float nextTimeToShoot = 0;
     public Transform ShootPoint;
     public float force;
+    private bool canShoot = false;
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -35,11 +36,7 @@ public class PatrollingEnemyTurret : MonoBehaviour
         }
         else
         {
-            RotateTowardsTarget();
-            if (Time.time % fireRate < 0.001)
-            {
-                Shoot();
-            }
+            RotateTowardsTarget();        
         }
 
         if (!CheckTargetIsInRange())
@@ -52,11 +49,23 @@ public class PatrollingEnemyTurret : MonoBehaviour
 
 
     }
-
+    IEnumerator ShootCoroutine()
+    {
+        canShoot = true;
+        yield return new WaitForSeconds(1.0f / fireRate);
+        canShoot = false;
+        Shoot();
+    }
 
     private bool CheckTargetIsInRange()
     {
+        if (!canShoot)
+        {
+            StartCoroutine(ShootCoroutine());
+        }
+
         return Vector2.Distance(target.position, transform.position) <= targetrange;
+
     }
 
     private void RotateTowardsTarget()
