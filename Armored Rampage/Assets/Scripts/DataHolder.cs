@@ -8,5 +8,7 @@ public class DataHolder : MonoBehaviour
     public static int Money { get; set; }
 
     public static int TankLevel { get; set; }
+    public static int PlayingFor { get; set; }
+
 
 }
