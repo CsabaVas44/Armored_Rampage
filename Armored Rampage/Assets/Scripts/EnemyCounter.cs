@@ -25,7 +25,7 @@ public class EnemyCounter : MonoBehaviour
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
 
-        enemyCounter.text = $"Enemies Alive: {enemies.Length}";
+        enemyCounter.text = $"Opponents left: {enemies.Length}";
         counterBefore--;
 
         if (enemies.Length == 0)
