@@ -145,6 +145,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4618723070735312907, guid: 773f16c286815cd4682071a945cfb167, type: 3}
+      propertyPath: m_Damping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4618723070735312907, guid: 773f16c286815cd4682071a945cfb167, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 758316932}
     - target: {fileID: 4618723070735312908, guid: 773f16c286815cd4682071a945cfb167, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -901,19 +909,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 79088999758098540, guid: 94b32e4a13b3ff1409c26ca914c53506, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
-      value: 16.331947
+      value: 16.2099
       objectReference: {fileID: 0}
     - target: {fileID: 79088999758098540, guid: 94b32e4a13b3ff1409c26ca914c53506, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
-      value: 13.856483
+      value: 13.612389
       objectReference: {fileID: 0}
     - target: {fileID: 79088999758098540, guid: 94b32e4a13b3ff1409c26ca914c53506, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
-      value: -14.968257
+      value: -14.785184
       objectReference: {fileID: 0}
     - target: {fileID: 79088999758098540, guid: 94b32e4a13b3ff1409c26ca914c53506, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
-      value: 13.814704
+      value: 13.570609
       objectReference: {fileID: 0}
     - target: {fileID: 79088999758098540, guid: 94b32e4a13b3ff1409c26ca914c53506, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
@@ -977,6 +985,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94b32e4a13b3ff1409c26ca914c53506, type: 3}
+--- !u!60 &758316932 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 79088999758098540, guid: 94b32e4a13b3ff1409c26ca914c53506, type: 3}
+  m_PrefabInstance: {fileID: 758316931}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &775869130
 GameObject:
   m_ObjectHideFlags: 0
