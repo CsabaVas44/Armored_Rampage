@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Level01.unity
     guid: 12df42bffd0eabb41a169319dd58b544
   - enabled: 1
-    path: Assets/Scenes/Levels/Level02.unity
+    path: Assets/Scenes/Levels/Level03.unity
     guid: 6ad855aab680bb44bb7d257b5a0f53e0
   - enabled: 1
     path: Assets/Scenes/UpgradeTank.unity

@@ -30,6 +30,10 @@ public class Turret : MonoBehaviour
         {
             reloadDelay = 0.5f;
         }
+        if (DataHolder.TankLevel == 2)
+        {
+            reloadDelay = 0.45f;
+        }
     }
 
     private void Update()
@@ -85,6 +89,31 @@ public class Turret : MonoBehaviour
                         bullet3.transform.position = barrel.position;
                         bullet3.transform.localRotation = barrel.rotation * Quaternion.Euler(0f, 0f, -10f);
                         bullet3.GetComponent<Bullet>().Initialize();
+                    }
+
+                    if (DataHolder.TankLevel == 2)
+                    {
+                        GameObject bullet2 = Instantiate(bulletPrefab);
+                        GameObject bullet3 = Instantiate(bulletPrefab);
+                        GameObject bullet4 = Instantiate(bulletPrefab);
+                        GameObject bullet5 = Instantiate(bulletPrefab);
+
+                        bullet2.transform.position = barrel.position;
+                        bullet2.transform.localRotation = barrel.rotation * Quaternion.Euler(0f, 0f, 10f);
+                        bullet2.GetComponent<Bullet>().Initialize();
+
+                        bullet3.transform.position = barrel.position;
+                        bullet3.transform.localRotation = barrel.rotation * Quaternion.Euler(0f, 0f, -10f);
+                        bullet3.GetComponent<Bullet>().Initialize();
+                        
+                        bullet4.transform.position = barrel.position;
+                        bullet4.transform.localRotation = barrel.rotation * Quaternion.Euler(0f, 0f, 15f);
+                        bullet4.GetComponent<Bullet>().Initialize();
+                        
+                        bullet5.transform.position = barrel.position;
+                        bullet5.transform.localRotation = barrel.rotation * Quaternion.Euler(0f, 0f, -15f);
+                        bullet5.GetComponent<Bullet>().Initialize();
+
                     }
                            
 
