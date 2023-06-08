@@ -26,11 +26,11 @@ public class Turret : MonoBehaviour
     {
         tankcolliders = GetComponentsInParent<Collider2D>();
 
-        if (DataHolder.TankLevel == 1)
+        if (DataHolder.TurretLvl == 1)
         {
             reloadDelay = 0.5f;
         }
-        if (DataHolder.TankLevel == 2)
+        if (DataHolder.TurretLvl == 2)
         {
             reloadDelay = 0.45f;
         }
@@ -77,7 +77,7 @@ public class Turret : MonoBehaviour
                     bullet.transform.localRotation = barrel.rotation;
                     bullet.GetComponent<Bullet>().Initialize();
 
-                    if (DataHolder.TankLevel == 1)
+                    if (DataHolder.TurretLvl == 1)
                     {
                         GameObject bullet2 = Instantiate(bulletPrefab);
                         GameObject bullet3 = Instantiate(bulletPrefab);
@@ -91,7 +91,7 @@ public class Turret : MonoBehaviour
                         bullet3.GetComponent<Bullet>().Initialize();
                     }
 
-                    if (DataHolder.TankLevel == 2)
+                    if (DataHolder.TurretLvl == 2)
                     {
                         GameObject bullet2 = Instantiate(bulletPrefab);
                         GameObject bullet3 = Instantiate(bulletPrefab);
