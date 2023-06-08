@@ -8,22 +8,32 @@ public class UpgradeTank : MonoBehaviour
 
     private void Start()
     {
-        DataHolder.Money = DataHolder.Money + 1000;
+        DataHolder.Money = DataHolder.Money + 2000;
     }
 
-    public void UpgradeTankLevel()
+    public void UpgradeTurret()
     {
-        if (DataHolder.Money >= 1000 && DataHolder.TankLevel <= 1)
+        if (DataHolder.Money >= 1000 && DataHolder.TurretLvl <= 1)
         {
-            DataHolder.TankLevel++;
+            DataHolder.TurretLvl++;
             DataHolder.Money = DataHolder.Money - 1000;
         }
     }
 
-    public void UpgradeTank500() // gány megoldás de a videóra jó --> nem upgradel csak levonja a dellát, azt megoldjuk okosba vágással hogy gyorsabb a tank xd
+    public void UpgradeHull()
     {
-        if (DataHolder.Money >= 500 && DataHolder.TankLevel <= 1)
+        if (DataHolder.Money >= 500 && DataHolder.HullLvl <= 1)
         {
+            DataHolder.HullLvl++;
+            DataHolder.Money = DataHolder.Money - 500;
+        }
+    }
+
+    public void UpgradeTrack()
+    {
+        if (DataHolder.Money >= 500 && DataHolder.TrackLvl <= 1)
+        {
+            DataHolder.TrackLvl++;
             DataHolder.Money = DataHolder.Money - 500;
         }
     }
