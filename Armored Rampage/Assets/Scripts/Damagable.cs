@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Damagable : MonoBehaviour
 {
     public float MaxHealth = 100;
+    public int lvlBoost = 100;
 
     [SerializeField]
     private float health;
@@ -30,6 +31,14 @@ public class Damagable : MonoBehaviour
 
     private void Start()
     {
+        if (DataHolder.HullLvl == 1)
+        {
+            Health = MaxHealth+(lvlBoost);
+        }
+        else if (DataHolder.HullLvl == 2)
+        {
+            Health = MaxHealth+(lvlBoost*2);
+        }
         Health = MaxHealth;
     }
 
