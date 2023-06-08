@@ -7,7 +7,8 @@ using UnityEngine.Events;
 public class TankMover : MonoBehaviour
 {
     public Rigidbody2D rb2d;
-    public float maxSpeed = 10;
+    public float maxSpeed = 75;
+    public int lvlBoost = 10;
     public float rotationSpeed = 100;
     Vector2 movementVector;
     Vector2 direction;
@@ -28,6 +29,14 @@ public class TankMover : MonoBehaviour
     {
         rb2d = GetComponentInParent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        if (DataHolder.TrackLvl == 1)
+        {
+            maxSpeed += lvlBoost;
+        }
+        else if (DataHolder.TrackLvl == 2)
+        {
+            maxSpeed += lvlBoost*DataHolder.TrackLvl;
+        }
     }
 
     private void FixedUpdate()
