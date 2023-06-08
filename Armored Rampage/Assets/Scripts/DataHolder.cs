@@ -9,6 +9,9 @@ public class DataHolder : MonoBehaviour
 
     public static int TankLevel { get; set; }
     public static int PlayingFor { get; set; }
+    public static int TrackLvl { get; set; }
+    public static int HullLvl { get; set; }
+    public static int TurretLvl { get; set; } // reload + bullet count
 
 
 }
