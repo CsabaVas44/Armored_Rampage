@@ -378,6 +378,26 @@ PrefabInstance:
       propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8780182695128097062, guid: b7fd28e37e5b0a743a7c1aac397f2159, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dbf51c030b101134c953831aab704d60, type: 3}
+    - target: {fileID: 8780182695128097063, guid: b7fd28e37e5b0a743a7c1aac397f2159, type: 3}
+      propertyPath: maxSpeed
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780182695128097063, guid: b7fd28e37e5b0a743a7c1aac397f2159, type: 3}
+      propertyPath: nSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: dbf51c030b101134c953831aab704d60, type: 3}
+    - target: {fileID: 8780182695128097063, guid: b7fd28e37e5b0a743a7c1aac397f2159, type: 3}
+      propertyPath: sSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: e0f5a341cb9b8084893ae284ef382af9, type: 3}
+    - target: {fileID: 8780182695128097063, guid: b7fd28e37e5b0a743a7c1aac397f2159, type: 3}
+      propertyPath: seSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: df92e64660dfdcc4c911b45dbc838ffc, type: 3}
     - target: {fileID: 8780182695354872436, guid: b7fd28e37e5b0a743a7c1aac397f2159, type: 3}
       propertyPath: m_Name
       value: Player2
@@ -688,11 +708,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2127963868856107429, guid: c38c87ff707eaec458a34f1769c6edff, type: 3}
       propertyPath: m_Layer
-      value: 16
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2127963868856107429, guid: c38c87ff707eaec458a34f1769c6edff, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Barrel
       objectReference: {fileID: 0}
     - target: {fileID: 2127963868856107442, guid: c38c87ff707eaec458a34f1769c6edff, type: 3}
       propertyPath: audioSource
@@ -708,7 +728,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2127963869492354314, guid: c38c87ff707eaec458a34f1769c6edff, type: 3}
       propertyPath: m_Layer
-      value: 16
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127963869492354314, guid: c38c87ff707eaec458a34f1769c6edff, type: 3}
+      propertyPath: m_TagString
+      value: Barrel
       objectReference: {fileID: 0}
     - target: {fileID: 2127963869492354315, guid: c38c87ff707eaec458a34f1769c6edff, type: 3}
       propertyPath: m_RootOrder
@@ -4527,6 +4551,26 @@ PrefabInstance:
       propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8780182695128097062, guid: b7fd28e37e5b0a743a7c1aac397f2159, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dbf51c030b101134c953831aab704d60, type: 3}
+    - target: {fileID: 8780182695128097063, guid: b7fd28e37e5b0a743a7c1aac397f2159, type: 3}
+      propertyPath: maxSpeed
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780182695128097063, guid: b7fd28e37e5b0a743a7c1aac397f2159, type: 3}
+      propertyPath: nSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: dbf51c030b101134c953831aab704d60, type: 3}
+    - target: {fileID: 8780182695128097063, guid: b7fd28e37e5b0a743a7c1aac397f2159, type: 3}
+      propertyPath: sSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: e0f5a341cb9b8084893ae284ef382af9, type: 3}
+    - target: {fileID: 8780182695128097063, guid: b7fd28e37e5b0a743a7c1aac397f2159, type: 3}
+      propertyPath: seSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: df92e64660dfdcc4c911b45dbc838ffc, type: 3}
     - target: {fileID: 8780182695354872436, guid: b7fd28e37e5b0a743a7c1aac397f2159, type: 3}
       propertyPath: m_Name
       value: Player1
@@ -4628,11 +4672,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2127963868856107429, guid: c38c87ff707eaec458a34f1769c6edff, type: 3}
       propertyPath: m_Layer
-      value: 16
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2127963868856107429, guid: c38c87ff707eaec458a34f1769c6edff, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Barrel
       objectReference: {fileID: 0}
     - target: {fileID: 2127963868856107442, guid: c38c87ff707eaec458a34f1769c6edff, type: 3}
       propertyPath: audioSource
@@ -4644,11 +4688,23 @@ PrefabInstance:
       objectReference: {fileID: 2809897135730789366, guid: 08f690cb3ec6aaa4f9f9c93621211885, type: 3}
     - target: {fileID: 2127963869492354314, guid: c38c87ff707eaec458a34f1769c6edff, type: 3}
       propertyPath: m_Layer
-      value: 16
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127963869492354314, guid: c38c87ff707eaec458a34f1769c6edff, type: 3}
+      propertyPath: m_TagString
+      value: Barrel
       objectReference: {fileID: 0}
     - target: {fileID: 2127963869492354315, guid: c38c87ff707eaec458a34f1769c6edff, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127963869492354315, guid: c38c87ff707eaec458a34f1769c6edff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127963869492354315, guid: c38c87ff707eaec458a34f1769c6edff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.83
       objectReference: {fileID: 0}
     - target: {fileID: 3247235116783373520, guid: c38c87ff707eaec458a34f1769c6edff, type: 3}
       propertyPath: m_RootOrder
@@ -138294,6 +138350,26 @@ PrefabInstance:
       propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8780182695128097062, guid: b7fd28e37e5b0a743a7c1aac397f2159, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dbf51c030b101134c953831aab704d60, type: 3}
+    - target: {fileID: 8780182695128097063, guid: b7fd28e37e5b0a743a7c1aac397f2159, type: 3}
+      propertyPath: maxSpeed
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780182695128097063, guid: b7fd28e37e5b0a743a7c1aac397f2159, type: 3}
+      propertyPath: nSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: dbf51c030b101134c953831aab704d60, type: 3}
+    - target: {fileID: 8780182695128097063, guid: b7fd28e37e5b0a743a7c1aac397f2159, type: 3}
+      propertyPath: sSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: e0f5a341cb9b8084893ae284ef382af9, type: 3}
+    - target: {fileID: 8780182695128097063, guid: b7fd28e37e5b0a743a7c1aac397f2159, type: 3}
+      propertyPath: seSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: df92e64660dfdcc4c911b45dbc838ffc, type: 3}
     - target: {fileID: 8780182695354872436, guid: b7fd28e37e5b0a743a7c1aac397f2159, type: 3}
       propertyPath: m_Name
       value: Player0
