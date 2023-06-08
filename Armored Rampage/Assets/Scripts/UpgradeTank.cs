@@ -19,6 +19,15 @@ public class UpgradeTank : MonoBehaviour
             DataHolder.Money = DataHolder.Money - 1000;
         }
     }
+
+    public void UpgradeTank500() // gány megoldás de a videóra jó --> nem upgradel csak levonja a dellát, azt megoldjuk okosba vágással hogy gyorsabb a tank xd
+    {
+        if (DataHolder.Money >= 500 && DataHolder.TankLevel <= 1)
+        {
+            DataHolder.Money = DataHolder.Money - 500;
+        }
+    }
+
     public void IncreaseTankHp()
     {
         //Lorem Ipsum
