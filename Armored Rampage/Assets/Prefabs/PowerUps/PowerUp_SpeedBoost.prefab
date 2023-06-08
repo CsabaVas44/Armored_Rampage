@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec23c870e65ccc4a962fd59f78d0378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buffValue: 50
+  buffValue: 25
   duration: 15
 --- !u!95 &1024474272367964220
 Animator:
