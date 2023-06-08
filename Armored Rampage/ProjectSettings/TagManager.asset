@@ -10,6 +10,7 @@ TagManager:
   - NextLevel
   - Bullet
   - Barrel
+  - powerup
   layers:
   - Default
   - TransparentFX
