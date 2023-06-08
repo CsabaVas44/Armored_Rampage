@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buffValue: 200
-  duration: 10
+  duration: 20
 --- !u!95 &438042292660895651
 Animator:
   serializedVersion: 5
